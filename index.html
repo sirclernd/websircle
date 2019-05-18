@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sircle</title>
+        <link rel="icon" type="image/png" href="assets/images/sircle_logo.svg" />
+        <!-- Core css -->
+        <link rel="stylesheet" id="bulma" href="assets/css/bulma.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/core_demo.css">
+        <!-- Plugins css -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/js/slick-carousel/slick.css">
+        <link rel="stylesheet" type="text/css" href="assets/js/slick-carousel/slick-theme.css">
+        <link rel="stylesheet" type="text/css" href="assets/js/ggpopover/ggtooltip.css">
+        <!-- Icons -->
+        <link rel="stylesheet" type="text/css" href="assets/css/icons.min.css">
+    </head>
+
+    <body>
+        <!-- Pageloader -->
+        <div class="pageloader"></div>
+        <div class="infraloader is-active"></div>
+
+        <!-- Hero and nav -->
+        <div id="large-header" class="hero is-slanted is-relative is-gradient is-fullheight is-halfed-mobile">
+            <div class="navbar-wrapper navbar-fade navbar-light">
+                <div class="hero-head">
+
+                    <!-- Nav -->
+                    <div class="container">
+                        <nav class="nav">
+                            <div class="container big">
+                                <div class="nav-left">
+                                    <a class="nav-item" href="index.html">
+                                        <img class="light-logo" src="assets/images/logos/sircle_logo.png" alt="">
+                                    </a>
+                                </div>
+                                <!-- Responsive toggle -->
+                                <span class="nav-toggle">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                                <div class="nav-right nav-menu">
+                                    <span class="nav-item">
+                                        <a id="#signup-btn" href="#" class="button button-signup btn-outlined is-bold btn-align light-btn rounded">
+                                            Gabung Kuy
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- /Nav -->
+
+                </div>
+            </div>
+
+            <!-- Hero image -->
+            <div id="main-hero" class="hero-body">
+                <div id="main-landing-title" class="container has-text-centered">
+                    <div class="columns">
+                        <div class="column is-6 is-offset-3 has-text-centered">
+                            <h1 class="title light-text text-bold is-1">
+                                Halo Halo Ajah.
+                            </h1>
+                            <br>
+                            <p class="has-text-centered">
+                                <a href="#product" class="button button-cta btn-align btn-outlined is-bold light-btn rounded z-index-2">
+                                    :D
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Hero image -->
+            <canvas id="demo-canvas"></canvas>
+        </div>
+        <!-- /Hero and nav -->
+
+
+        <!-- Mockup section -->
+        <div class="section is-medium">
+            <div class="container">
+                <div class="columns">
+                    <div id="main-landing-mockup" class="column is-10 is-offset-1">
+                        <center>
+                        <br><video width = 400 autoplay control loop>
+                            <source src="assets/images/illustrations/mockups/hehe.mp4" type="video/mp4">
+                        </video>
+                        <video width = 400 control>
+                                <source src="assets/images/illustrations/mockups/mobil.mp4" type="video/mp4">
+                        </video> 
+                    </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Mockup section -->
+
+        <!-- Clients -->
+        <div class="hero-foot">
+            <div class="container">
+                <div class="made-with-wrapper">
+                    <h2 class="made-with-title">Dibuat Dengan</h2>
+                    <div class="made-with">
+                        <img class="is-html" src="https://png.pngtree.com/element_origin_min_pic/17/04/23/3140a4c041892d4892f6e0f573340297.jpg" alt="">
+                        <img class="is-bulma" src="data:image/jpeg;base64,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" alt="">
+                        <img class="is-sass" src="data:image/png;base64,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" alt="">
+                        <img class="is-sass" src="https://www.freepnglogos.com/uploads/e-letter-alphabet-logo-31.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Clients -->
+
+        <!-- Services -->
+        <section id="product" class="section is-medium">
+            <div class="container">
+
+                <div class="section-title-wrapper">
+                    <div class="bg-number">1</div>
+                    <h2 class="title section-title has-text-centered dark-text">
+                        Divisi Kami
+                    </h2>
+                </div>
+
+                <div class="content-wrapper">
+                    <div class="columns is-vcentered has-text-centered">
+                        <div class="column is-3">
+                            <img class="feature-icon-md is-feature-reveal" src="https://drive.google.com/uc?id=1ZYbuD4eG9ZJpPqZoDfl7i7LiXlNm36wT" alt="">
+                            <h2 class="feature-description">
+                                <span class="feature-key secondary">SircleAI</span> 
+                                <span>Bring AI to Everyone</span>
+                            </h2>
+                        </div>
+
+                        <div class="column is-3">
+                            <img class="feature-icon-md is-feature-reveal" src="assets/images/illustrations/icons/demos.svg" alt="">
+                            <h2 class="feature-description">
+                                <span class="feature-key secondary">Multiple</span> 
+                                <span>Layouts and styles</span>
+                            </h2>
+                        </div>
+
+                        <div class="column is-3">
+                            <img class="feature-icon-md is-feature-reveal" src="assets/images/illustrations/icons/modern.svg" alt="">
+                            <h2 class="feature-description">
+                                <span class="feature-key secondary">Modern</span> 
+                                <span>Clean designs</span>
+                            </h2>
+                        </div>
+
+                        <div class="column is-3">
+                            <img class="feature-icon-md is-feature-reveal" src="assets/images/illustrations/icons/dynamic.svg" alt="">
+                            <h2 class="feature-description">
+                                <span class="feature-key secondary">Upcoming</span> 
+                                <span>Updates</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /Services -->
+
+        <!-- Demos section -->
+        <section class="section section-feature-grey is-medium">
+            <div class="container">
+
+                <div class="section-title-wrapper">
+                    <div class="bg-number">2</div>
+                    <h2 class="title section-title has-text-centered dark-text">
+                        Aktivitas Kita
+                    </h2>
+                </div>
+
+                <div class="content-wrapper">
+                    <!-- Demo grid -->
+                    <div class="demo-wrap">
+                        <!-- Tabs -->
+                        <div id="demo-tabs" class="navigation-tabs translated-tabs simple-tabs">
+                            <div class="tabs is-centered">
+                                <ul>
+                                    <li class="is-active" data-tab="landing-kit-1"><a>SircleAI</a></li>
+                                    <li data-tab="landing-kit-2"><a>SircleIT</a></li>
+                                    <li data-tab="landing-kit-3"><a>SircleTKSE</a></li>
+                                    <li data-tab="landing-kit-4"><a>SircleRPLM</a></li>
+                                    <li data-tab="startup-kit"><a>SircleMKP</a></li>
+                                    <li data-tab="agency-kit"><a>SircleRI</a></li>
+                                    <li data-tab="dashboard-kit"><a>Sircle</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Landing kit 1 -->
+                            <div id="landing-kit-1" class="navtab-content is-active">
+                                <div id="lk1-wrapper">
+                                    <!-- Demo row -->
+                                    <div class="columns is-vcentered is-multiline">
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/sircleai/hehe.png" alt=""/>	
+                                                <div class="circle-overlay is-landing"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Real Time Pose Estimator
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/sircleai/mobil.png" alt=""/>	
+                                                <div class="circle-overlay is-landing"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Mask R-CNN
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href=""></a>Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                                <figure class="demo-wrapper">
+                                                    <img src="assets/images/photos/sircleai/andrevsjerry.png" alt=""/>	
+                                                    <div class="circle-overlay is-landing"></div>
+                                                    <div class="demo-info has-text-centered">
+                                                        <div class="wrapper">
+                                                            <div class="demo-title">
+                                                                Biometric Attendance Management
+                                                            </div>
+                                                            <div class="demo-link">
+                                                                <a href=""></a>Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                                <figure class="demo-wrapper">
+                                                    <img src="assets/images/photos/sircleai/yolo.jpg" alt=""/>	
+                                                    <div class="circle-overlay is-landing"></div>
+                                                    <div class="demo-info has-text-centered">
+                                                        <div class="wrapper">
+                                                            <div class="demo-title">
+                                                                Multiple Object Detection using CNN TensorFlow
+                                                            </div>
+                                                            <div class="demo-link">
+                                                                <a href=""></a>Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                        <!-- /Demo item -->
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                                <figure class="demo-wrapper">
+                                                    <img src="assets/images/photos/sircleai/doktertanam.png" alt=""/>	
+                                                    <div class="circle-overlay is-landing"></div>
+                                                    <div class="demo-info has-text-centered">
+                                                        <div class="wrapper">
+                                                            <div class="demo-title">
+                                                                Doktertanam
+                                                            </div>
+                                                            <div class="demo-link">
+                                                                <a href=""></a>Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                        <!-- /Demo item -->
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                                <figure class="demo-wrapper">
+                                                    <img src="assets/images/photos/sircleai/deepdream.jpeg" alt=""/>	
+                                                    <div class="circle-overlay is-landing"></div>
+                                                    <div class="demo-info has-text-centered">
+                                                        <div class="wrapper">
+                                                            <div class="demo-title">
+                                                                Deep Dream Algorithm Python 3
+                                                            </div>
+                                                            <div class="demo-link">
+                                                                <a href=""></a>Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                        <!-- /Demo item -->
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                                <figure class="demo-wrapper">
+                                                    <img src="assets/images/photos/sircleai/tspe.jpg" alt=""/>	
+                                                    <div class="circle-overlay is-landing"></div>
+                                                    <div class="demo-info has-text-centered">
+                                                        <div class="wrapper">
+                                                            <div class="demo-title">
+                                                                TSP Solver
+                                                            </div>
+                                                            <div class="demo-link">
+                                                                <a href=""></a>Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                        <!-- /Demo item -->
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                                <figure class="demo-wrapper">
+                                                    <img src="assets/images/photos/sircleai/gempa.png" alt=""/>	
+                                                    <div class="circle-overlay is-landing"></div>
+                                                    <div class="demo-info has-text-centered">
+                                                        <div class="wrapper">
+                                                            <div class="demo-title">
+                                                                DIED : Daily Indonesian Earthquake Diagnostic
+                                                            </div>
+                                                            <div class="demo-link">
+                                                                <a href=""></a>Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                        <!-- /Demo item -->
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                                <figure class="demo-wrapper">
+                                                    <img src="assets/images/photos/sircleai/insaf.png" alt=""/>	
+                                                    <div class="circle-overlay is-landing"></div>
+                                                    <div class="demo-info has-text-centered">
+                                                        <div class="wrapper">
+                                                            <div class="demo-title">
+                                                                INSAF : Investation Safe
+                                                            </div>
+                                                            <div class="demo-link">
+                                                                <a href=""></a>Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                        <!-- /Demo item -->
+                                    </div>
+                                    <!-- /Demo row -->
+                                </div>
+                            </div>
+                            <!-- /Landing -->
+
+                            <!-- Features -->
+                            <div id="landing-kit-2" class="navtab-content">
+                                <div id="lk2-wrapper">
+                                    <!-- Demo row -->
+                                    <div class="columns is-vcentered is-multiline">
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v1.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v1"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Landing page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v1.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v1-features.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v1"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Feature page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v1-features.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v1-pricing.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v1"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Pricing page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v1-pricing.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v1-login.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v1"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Login page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v1-login.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v1-signup.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v1"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Signup page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v1-signup.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+                                    </div>
+                                    <!-- /Demo row -->
+                                </div>
+                            </div>
+                            <!-- /Features -->
+
+                            <!-- Pricing -->
+                            <div id="landing-kit-3" class="navtab-content">
+                                <div id="lk3-wrapper">
+                                    <!-- Demo row -->
+                                    <div class="columns is-vcentered is-multiline">
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v2.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v2"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Landing page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v2.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v2-features.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v2"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Feature page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v2-features.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v2-pricing.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v2"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Pricing page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v2-pricing.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v2-login.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v2"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Login page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v2-login.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v2-signup.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v2"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Signup page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v2-signup.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+                                    </div>
+                                    <!-- /Demo row -->
+                                </div>
+                            </div>
+                            <!-- /Pricing -->
+
+                            <!-- Login -->
+                            <div id="landing-kit-4" class="navtab-content">
+                                <div id="lk4-wrapper">
+                                    <!-- Demo row -->
+                                    <div class="columns is-vcentered is-multiline">
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v3.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v3"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Landing page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v3.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v3-pricing.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v3"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Pricing page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v3-pricing.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v3-help-center.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v3"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Help center
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v3-help.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v3-help-category.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v3"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Help category
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v3-help-category.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v3-help-article.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v3"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Help article
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v3-help-article.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v3-login.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v3"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Login page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v3-login.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/landing-v3-signup.png" alt=""/>	
+                                                <div class="circle-overlay is-landing-v3"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Sign up page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="landing-v3-signup.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+                                    </div>
+                                    <!-- /Demo row -->
+                                </div>
+                            </div>
+                            <!-- /Login -->
+
+                            <!-- Signup -->
+                            <div id="startup-kit" class="navtab-content">
+                                <div id="sk-wrapper">
+                                    <!-- Demo row -->
+                                    <div class="columns is-vcentered is-multiline">
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/startup-home.png" alt=""/>	
+                                                <div class="circle-overlay"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Homepage
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="startup.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/startup-product.png" alt=""/>	
+                                                <div class="circle-overlay"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Product page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="startup-product.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/startup-about.png" alt=""/>	
+                                                <div class="circle-overlay"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            About page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="startup-about.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/startup-contact.png" alt=""/>	
+                                                <div class="circle-overlay"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Contact page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="startup-contact.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/startup-login.png" alt=""/>	
+                                                <div class="circle-overlay"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Login page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="startup-login.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/startup-signup.png" alt=""/>	
+                                                <div class="circle-overlay"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Sign up page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="startup-signup.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+                                    </div>
+                                    <!-- /Demo row -->
+                                </div>
+                            </div>
+                            <!-- /Signup -->
+
+                            <!-- Agency kit -->
+                            <div id="agency-kit" class="navtab-content">
+                                <div id="ak-wrapper">
+                                    <!-- Demo row -->
+                                    <div class="columns is-vcentered is-multiline">
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/agency-home.png" alt=""/>	
+                                                <div class="circle-overlay is-agency"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Homepage
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="agency.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/agency-about.png" alt=""/>	
+                                                <div class="circle-overlay is-agency"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            About page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="agency-about.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/agency-portfolio.png" alt=""/>	
+                                                <div class="circle-overlay is-agency"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Portfolio page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="agency-portfolio.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/agency-contact.png" alt=""/>	
+                                                <div class="circle-overlay is-agency"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Contact page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="agency-contact.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/agency-blog.png" alt=""/>	
+                                                <div class="circle-overlay is-agency"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Blog page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="agency-blog.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/agency-post-sidebar.png" alt=""/>	
+                                                <div class="circle-overlay is-agency"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Post with sidebar
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="agency-post-sidebar.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/agency-post-nosidebar.png" alt=""/>	
+                                                <div class="circle-overlay is-agency"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Post without sidebar
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="agency-post-nosidebar.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+                                    </div>
+                                    <!-- Demo row -->
+                                </div>
+                            </div>
+                            <!-- /Agency kit -->
+
+                            <!-- Dashboard kit -->
+                            <div id="dashboard-kit" class="navtab-content">
+                                <div id="dk-wrapper">
+                                    <!-- Demo row -->
+                                    <div class="columns is-vcentered is-multiline">
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/dashboard.png" alt=""/>	
+                                                <div class="circle-overlay is-dashboard"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Dashboard light
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="dashboard.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/dashboard-dark.png" alt=""/>	
+                                                <div class="circle-overlay is-dashboard"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Dashboard dark
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="dashboard-dark-nav.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/dashboard-widgets-data.png" alt=""/>	
+                                                <div class="circle-overlay is-dashboard"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Data widgets
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="dashboard-widgets-data.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/dashboard-widgets-social.png" alt=""/>	
+                                                <div class="circle-overlay is-dashboard"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Social widgets
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="dashboard-widgets-social.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/dashboard-feed.png" alt=""/>	
+                                                <div class="circle-overlay is-dashboard"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Social feed
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="dashboard-feed.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/dashboard-post.png" alt=""/>	
+                                                <div class="circle-overlay is-dashboard"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Feed post
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="dashboard-feed-post.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/dashboard-chartjs.png" alt=""/>	
+                                                <div class="circle-overlay is-dashboard"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Chart js
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="dashboard-chartjs.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/dashboard-billboardjs.png" alt=""/>	
+                                                <div class="circle-overlay is-dashboard"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Billboard js
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="dashboard-billboardjs.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/dashboard-peityjs.png" alt=""/>	
+                                                <div class="circle-overlay is-dashboard"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Peity js
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="dashboard-peityjs.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/dashboard-login.png" alt=""/>	
+                                                <div class="circle-overlay is-dashboard"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Dashboard login
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="dashboard-login.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+
+                                        <!-- Demo item -->
+                                        <div class="column is-6 has-text-centered">
+                                            <figure class="demo-wrapper">
+                                                <img src="assets/images/photos/captures/dashboard-blank.png" alt=""/>	
+                                                <div class="circle-overlay is-dashboard"></div>
+                                                <div class="demo-info has-text-centered">
+                                                    <div class="wrapper">
+                                                        <div class="demo-title">
+                                                            Blank page
+                                                        </div>
+                                                        <div class="demo-link">
+                                                            <a href="dashboard-blank.html" target="_blank">Go to demo <i class="material-icons">keyboard_arrow_right</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <!-- /Demo item -->
+                                    </div>
+                                    <!-- Demo row -->
+                                </div>
+                            </div>
+                            <!-- Dashboard kit -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Demos section -->
+
+        <!-- Features section -->
+        <section class="section section-feature-grey is-medium">
+            <div class="container">
+
+                <div class="section-title-wrapper">
+                    <div class="bg-number">4</div>
+                    <h2 class="title section-title has-text-centered dark-text">
+                        Kegabutan Kita
+                    </h2>
+                </div>
+
+                <div class="content-wrapper">
+                    <div class="columns is-vcentered has-text-centered">
+                        <div class="column is-hidden-mobile"></div>
+                        <!-- Icon box -->
+                        <div class="column is-3">
+                            <div class="square-icon-box rounded secondary">
+                                <div class="icon-box-wrapper">
+                                    <div class="icon-box">
+                                        <i class="material-icons">view_module</i>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    Modular approach
+                                </div>
+                                <div class="box-text">
+                                    Bulkit is built with a modular approach. Component styles are isolated.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Icon box -->
+                        <div class="column is-3">
+                            <div class="square-icon-box rounded secondary">
+                                <div class="icon-box-wrapper">
+                                    <div class="icon-box">
+                                        <i class="material-icons">code</i>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    Sass powered
+                                </div>
+                                <div class="box-text">
+                                    Bulkit's css relies on SASS scss syntax for more control over layouts.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Icon box -->
+                        <div class="column is-3">
+                            <div class="square-icon-box rounded accent">
+                                <div class="icon-box-wrapper">
+                                    <div class="icon-box">
+                                        <i class="material-icons">view_quilt</i>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    Various Layouts
+                                </div>
+                                <div class="box-text">
+                                    Bulkit's flexbox grid allows infinite layout and design possibilities.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-hidden-mobile"></div>
+                    </div>
+                    <div class="columns is-vcentered no-margin no-padding-bottom has-text-centered mt-80">
+                        <div class="column is-hidden-mobile"></div>
+                        <!-- Icon box -->
+                        <div class="column is-3">
+                            <div class="square-icon-box rounded secondary">
+                                <div class="icon-box-wrapper">
+                                    <div class="icon-box">
+                                        <i class="material-icons">import_contacts</i>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    Detailed documentation
+                                </div>
+                                <div class="box-text">
+                                    Bulkit is shipped with an extensive documentation to get you started fast.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Icon box -->
+                        <div class="column is-3">
+                            <div class="square-icon-box rounded secondary">
+                                <div class="icon-box-wrapper">
+                                    <div class="icon-box">
+                                        <i class="material-icons">headset_mic</i>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    Customer support
+                                </div>
+                                <div class="box-text">
+                                    Customer support is central. We help you if you have issues or questions.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Icon box -->
+                        <div class="column is-3">
+                            <div class="square-icon-box rounded accent">
+                                <div class="icon-box-wrapper">
+                                    <div class="icon-box">
+                                        <i class="material-icons">cloud_done</i>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    Lifetime updates
+                                </div>
+                                <div class="box-text">
+                                    You get lifetime updates, with new landing kits, pages and components.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-hidden-mobile"></div>
+                    </div>
+                    <div class="columns is-vcentered no-margin has-text-centered">
+                        <div class="column is-hidden-mobile"></div>
+                        <!-- Icon box -->
+                        <div class="column is-3">
+                            <div class="square-icon-box rounded secondary">
+                                <div class="icon-box-wrapper">
+                                    <div class="icon-box">
+                                        <i class="material-icons">attach_money</i>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    1 premium plugin (save $30)
+                                </div>
+                                <div class="box-text">
+                                    With Bulkit you get a valuable access to the awesome Innostudio file uploader.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Icon box -->
+                        <div class="column is-3">
+                            <div class="square-icon-box rounded secondary">
+                                <div class="icon-box-wrapper">
+                                    <div class="icon-box">
+                                        <i class="material-icons">favorite</i>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    3000+ font icons
+                                </div>
+                                <div class="box-text">
+                                    Bulkit features 4 icon libraries with more than 3000+ exquisite icons.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Icon box -->
+                        <div class="column is-3">
+                            <div class="square-icon-box rounded accent">
+                                <div class="icon-box-wrapper">
+                                    <div class="icon-box">
+                                        <i class="material-icons">devices</i>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    Responsive design
+                                </div>
+                                <div class="box-text">
+                                    Bulkit is fully responsive and sits on Bulma, a mobile first framework.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-hidden-mobile"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /Features section -->
+
+        <!-- CTA section -->
+        <section class="section is-medium is-relative footer-chart">
+            <div class="container has-text-centered">
+
+                <div class="bottom-spacer">
+                    <div class="section-title-wrapper">
+                        <div class="bg-number">6</div>
+                        <h2 class="title section-title has-text-centered dark-text">
+                            Ayo Gabung Bawa Teknologi untuk Sesama
+                        </h2>
+                    </div>
+
+                    <p class="has-text-centered pt-40 pb-40">
+                        <a class="button button-cta btn-align secondary-btn raised rounded z-index-2">
+                            Gabung
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <!-- /CTA section -->
+
+        <!-- Footer -->
+        <footer class="footer footer-light is-tainted">
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <div class="footer-column">
+                            <div class="footer-header">
+                                <h3>Product</h3>
+                            </div>
+                            <ul class="link-list">
+                                <li><a href="features.html">Discover features</a></li>
+                                <li><a href="features.html">CMS integration</a></li>
+                                <li><a href="#">Customers</a></li>
+                                <li><a href="#">Weekly sessions</a></li>
+                                <li><a href="#">Free trials and demo</a></li>
+                                <li><a href="#">What's next ?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="footer-column">
+                            <div class="footer-header">
+                                <h3>Company</h3>
+                            </div>
+                            <ul class="link-list">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">About security</a></li>
+                                <li><a href="#">User guide</a></li>
+                                <li><a href="#">Terms of service</a></li>
+                                <li><a href="#">Terms of website use</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="footer-column">
+                            <div class="footer-header">
+                                <h3>Learning</h3>
+                            </div>
+                            <ul class="link-list">
+                                <li><a href="contact.html">Resources</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">API documentation</a></li>
+                                <li><a href="#">Admin guide</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="footer-column">
+                            <div class="footer-logo">
+                                <img src="assets/images/logos/sircle-w.png" alt="">
+                            </div>
+                            <div class="footer-header">
+                                <nav class="level is-mobile">
+                                    <div class="level-left level-social">
+                                        <a class="level-item">
+                                            <span class="icon"><i class="fa fa-facebook"></i></span>
+                                        </a>
+                                        <a class="level-item">
+                                            <span class="icon"><i class="fa fa-twitter"></i></span>
+                                        </a>
+                                        <a class="level-item">
+                                            <span class="icon"><i class="fa fa-linkedin"></i></span>
+                                        </a>
+                                        <a class="level-item">
+                                            <span class="icon"><i class="fa fa-dribbble"></i></span>
+                                        </a>
+                                        <a class="level-item">
+                                            <span class="icon"><i class="fa fa-github"></i></span>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="copyright">
+                                <span class="moto light-text">Designed and coded with <i class="fa fa-heart light-text"></i> by CSS Ninja.</span>
+                            </div>
+                            <div class="made-with-logo">
+                                    <a href="https://bulma.io/" target="_blank"><img src="assets/images/logos/brands/made-with-bulma--white.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+        <!-- /Footer -->
+
+        <!-- Side navigation -->
+        <div class="side-navigation-menu">
+            <!-- Categories menu -->
+            <div class="category-menu-wrapper">
+                <!-- Menu -->
+                <ul class="categories">
+                    <li class="square-logo"><img src="assets/images/logos/square-white.svg" alt=""></li>
+                    <li class="category-link is-active" data-navigation-menu="demo-pages"><i class="sl sl-icon-layers"></i></li>
+                    <li class="category-link" data-navigation-menu="components"><i class="sl sl-icon-grid"></i></li>
+                    <li class="category-link" data-navigation-menu="extras"><i class="sl sl-icon-present"></i></li>
+                </ul>
+                <!-- Menu -->
+
+                <ul class="author">
+                    <li>
+                        <!-- Theme author -->
+                        <a href="https://cssninja.io" target="_blank">
+                            <img class="main-menu-author" src="assets/images/logos/cssninja.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Categories menu -->
+
+            <!-- Navigation menu -->
+            <div id="demo-pages" class="navigation-menu-wrapper animated preFadeInRight fadeInRight">
+                <!-- Navigation Header -->
+                <div class="navigation-menu-header">
+                    <span>Demo pages</span>
+                    <a class="ml-auto hamburger-btn navigation-close" href="javascript:void(0);">
+                        <span class="menu-toggle">	
+                            <span class="icon-box-toggle"> 	
+                                <span class="rotate">
+                                    <i class="icon-line-top"></i>
+                                    <i class="icon-line-center"></i>
+                                    <i class="icon-line-bottom"></i> 
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <!-- Navigation Body -->
+                <ul class="navigation-menu">
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">weekend</span>Agency kit</a>
+                        <ul>
+                            <li><a class="is-submenu" href="agency.html">Homepage</a></li>
+                            <li><a class="is-submenu" href="agency-about.html">About</a></li>
+                            <li><a class="is-submenu" href="agency-portfolio.html">Portfolio</a></li>
+                            <li><a class="is-submenu" href="agency-contact.html">Contact</a></li>
+                            <li><a class="is-submenu" href="agency-blog.html">Blog</a></li>
+                            <li><a class="is-submenu" href="agency-post-sidebar.html">Post sidebar</a></li>
+                            <li><a class="is-submenu" href="agency-post-nosidebar.html">Post no sidebar</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">wb_incandescent</span>Startup kit</a>
+                        <ul>
+                            <li><a class="is-submenu" href="startup.html">Homepage</a></li>
+                            <li><a class="is-submenu" href="startup-about.html">About</a></li>
+                            <li><a class="is-submenu" href="startup-product.html">Product</a></li>
+                            <li><a class="is-submenu" href="startup-contact.html">Contact</a></li>
+                            <li><a class="is-submenu" href="startup-login.html">Login</a></li>
+                            <li><a class="is-submenu" href="startup-signup.html">Sign up</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">looks</span>Landing kit v1</a>
+                        <ul>
+                            <li><a class="is-submenu" href="landing.html">Landing page</a></li>
+                            <li><a class="is-submenu" href="landing-features.html">Feature page</a></li>
+                            <li><a class="is-submenu" href="landing-pricing.html">Pricing page</a></li>
+                            <li><a class="is-submenu" href="landing-login.html">Login page</a></li>
+                            <li><a class="is-submenu" href="landing-signup.html">Signup page</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">invert_colors</span>Landing kit v2</a>
+                        <ul>
+                            <li><a class="is-submenu" href="landing-v1.html">Landing page</a></li>
+                            <li><a class="is-submenu" href="landing-v1-features.html">Feature page</a></li>
+                            <li><a class="is-submenu" href="landing-v1-pricing.html">Pricing page</a></li>
+                            <li><a class="is-submenu" href="landing-v1-login.html">Login page</a></li>
+                            <li><a class="is-submenu" href="landing-v1-signup.html">Signup page</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">chat_bubble</span>Landing kit v3</a>
+                        <ul>
+                            <li><a class="is-submenu" href="landing-v2.html">Landing page</a></li>
+                            <li><a class="is-submenu" href="landing-v2-features.html">Feature page</a></li>
+                            <li><a class="is-submenu" href="landing-v2-pricing.html">Pricing page</a></li>
+                            <li><a class="is-submenu" href="landing-v2-login.html">Login page</a></li>
+                            <li><a class="is-submenu" href="landing-v2-signup.html">Signup page</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">business</span>Landing kit v4</a>
+                        <ul>
+                            <li><a class="is-submenu" href="landing-v3.html">Landing page</a></li>
+                            <li><a class="is-submenu" href="landing-v3-pricing.html">Pricing page</a></li>
+                            <li><a class="is-submenu" href="landing-v3-help.html">Help center</a></li>
+                            <li><a class="is-submenu" href="landing-v3-help-category.html">Help category</a></li>
+                            <li><a class="is-submenu" href="landing-v3-help-article.html">Help article</a></li>
+                            <li><a class="is-submenu" href="landing-v3-signup.html">Login</a></li>
+                            <li><a class="is-submenu" href="landing-v3-login.html">Sign up</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Navigation menu -->
+
+            <!-- Navigation menu -->
+            <div id="components" class="navigation-menu-wrapper animated preFadeInRight fadeInRight is-hidden">
+                <!-- Navigation Header -->
+                <div class="navigation-menu-header">
+                    <span>Components</span>
+                    <a class="ml-auto hamburger-btn navigation-close" href="javascript:void(0);">
+                        <span class="menu-toggle">	
+                            <span class="icon-box-toggle"> 	
+                                <span class="rotate">
+                                    <i class="icon-line-top"></i>
+                                    <i class="icon-line-center"></i>
+                                    <i class="icon-line-bottom"></i> 
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <!-- Navigation body -->
+                <ul class="navigation-menu">
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">view_quilt</span>Layout</a>
+                        <ul>
+                            <li><a class="is-submenu" href="_components-layout-grid.html">Grid system</a></li>
+                            <li><a class="is-submenu" href="_components-layout-navbars.html">Navbars</a></li>
+                            <li><a class="is-submenu" href="_components-layout-video.html">Video background</a></li>
+                            <li><a class="is-submenu" href="_components-layout-parallax.html">Parallax</a></li>
+                            <li><a class="is-submenu" href="_components-layout-headers.html">Headers</a></li>
+                            <li><a class="is-submenu" href="_components-layout-footers.html">Footers</a></li>
+                            <li><a class="is-submenu" href="_components-layout-typography.html">Typography</a></li>
+                            <li><a class="is-submenu" href="_components-layout-colors.html">Colors</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">view_stream</span>Sections</a>
+                        <ul>
+                            <li><a class="is-submenu" href="_components-sections-features.html">Features</a></li>
+                            <li><a class="is-submenu" href="_components-sections-pricing.html">Pricing</a></li>
+                            <li><a class="is-submenu" href="_components-sections-team.html">Team</a></li>
+                            <li><a class="is-submenu" href="_components-sections-testimonials.html">Testimonials</a></li>
+                            <li><a class="is-submenu" href="_components-sections-clients.html">Clients</a></li>
+                            <li><a class="is-submenu" href="_components-sections-counters.html">Counters</a></li>
+                            <li><a class="is-submenu" href="_components-sections-carousel.html">Carousel</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">playlist_add_check</span>Basic UI</a>
+                        <ul>
+                            <li><a class="is-submenu" href="_components-basicui-cards.html">Cards</a></li>
+                            <li><a class="is-submenu" href="_components-basicui-buttons.html">Buttons</a></li>
+                            <li><a class="is-submenu" href="_components-basicui-dropdowns.html">Dropdowns</a></li>
+                            <li><a class="is-submenu" href="_components-basicui-lists.html">Lists</a></li>
+                            <li><a class="is-submenu" href="_components-basicui-modals.html">Modals</a></li>
+                            <li><a class="is-submenu" href="_components-basicui-tabs.html">Tabs & pills</a></li>
+                            <li><a class="is-submenu" href="_components-basicui-accordion.html">Accordions</a></li>
+                            <li><a class="is-submenu" href="_components-basicui-badges.html">Badges & labels</a></li>
+                            <li><a class="is-submenu" href="_components-basicui-popups.html">Popups</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">playlist_add</span>Advanced UI</a>
+                        <ul>
+                            <li><a class="is-submenu" href="_components-advancedui-tables.html">Tables</a></li>
+                            <li><a class="is-submenu" href="_components-advancedui-timeline.html">Timeline</a></li>
+                            <li><a class="is-submenu" href="_components-advancedui-boxes.html">Boxes</a></li>
+                            <li><a class="is-submenu" href="_components-advancedui-messages.html">Messages</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">check_box</span>Forms</a>
+                        <ul>
+                            <li><a class="is-submenu" href="_components-forms-inputs.html">Inputs</a></li>
+                            <li><a class="is-submenu" href="_components-forms-controls.html">Controls</a></li>
+                            <li><a class="is-submenu" href="_components-forms-layouts.html">Form layouts</a></li>
+                            <li><a class="is-submenu" href="_components-forms-uploader.html">Uploader</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">adjust</span>Icons</a>
+                        <ul>
+                            <li><a class="is-submenu" href="_components-icons-im.html">Icons Mind</a></li>
+                            <li><a class="is-submenu" href="_components-icons-sl.html">Simple Line Icons</a></li>
+                            <li><a class="is-submenu" href="_components-icons-fa.html">Font Awesome</a></li>
+                            <li><a class="is-submenu" href="https://material.io/icons/" target="_blank">Material Icons</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Navigation menu -->
+
+            <!-- Navigation menu -->
+            <div id="extras" class="navigation-menu-wrapper animated preFadeInRight fadeInRight is-hidden">
+                <!-- Navigation Header -->
+                <div class="navigation-menu-header">
+                    <span>Extras</span>
+                    <a class="ml-auto hamburger-btn navigation-close" href="javascript:void(0);">
+                        <span class="menu-toggle">	
+                            <span class="icon-box-toggle"> 	
+                                <span class="rotate">
+                                    <i class="icon-line-top"></i>
+                                    <i class="icon-line-center"></i>
+                                    <i class="icon-line-bottom"></i> 
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <!-- Navigation body -->
+                <ul class="navigation-menu">
+                    <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">dashboard</span>Dashboard kit</a>
+                        <ul>
+                            <li><a class="is-submenu" href="dashboard.html">Main Layout</a></li>
+                            <li><a class="is-submenu" href="dashboard-dark-nav.html">Dark Sidebar</a></li>
+                            <li><a class="is-submenu" href="dashboard-blank.html">Blank page</a></li>
+                            <li><a class="is-submenu" href="dashboard-chartjs.html">Chartjs charts</a></li>
+                            <li><a class="is-submenu" href="dashboard-billboardjs.html">Billboardjs charts</a></li>
+                            <li><a class="is-submenu" href="dashboard-peityjs.html">Peity charts</a></li>
+                            <li><a class="is-submenu" href="dashboard-widgets-data.html">Data widgets</a></li>
+                            <li><a class="is-submenu" href="dashboard-widgets-social.html">Social widgets</a></li>
+                            <li><a class="is-submenu" href="dashboard-feed.html">Dashboard feed</a></li>
+                            <li><a class="is-submenu" href="dashboard-feed-post.html">Feed post</a></li>
+                            <li><a class="is-submenu" href="dashboard-login.html">Login</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Navigation menu -->
+        </div>
+        <!-- /Side navigation -->
+
+
+        <!-- Back To Top Button -->
+        <div id="backtotop"><a href="#"></a></div>
+
+
+        <!-- Core js -->
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/modernizr.min.js"></script>
+        <!-- Plugins js -->
+        <script src="assets/js/slick-carousel/slick.min.js"></script>
+        <script src="assets/js/ggpopover/ggtooltip.js"></script>
+        <script src="assets/js/scrollreveal/scrollreveal.min.js"></script>
+        <!-- Bulkit js -->
+        <script src="assets/js/main.js"></script>
+        <!-- Page specific js -->
+        <script src="assets/js/pages/index.js"></script>
+
+    </body>
+</html>
